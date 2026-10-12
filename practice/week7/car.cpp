@@ -5,15 +5,16 @@ using namespace std;
 
 class Car{
 public:
-    int speed;
-    int gear;
-    string color;
-
-    void SpeedUp(){
+    //멤버 변수 선언
+    int speed; //속도
+    int gear; //기어
+    string color; //색상
+    //멤버 함수 선언
+    void SpeedUp(){ //속도 증가
         speed += 10;
     }
 
-    void SpeedDown() {
+    void SpeedDown() { //속도 감소
         speed -= 10;
     }
 };

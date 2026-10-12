@@ -6,10 +6,10 @@ class Circle {
 public:
     double calcArea();
 
-    int radius;
-    string color;
+    int radius; //반지름
+    string color; //색깔
 };
-
+//클래스 외부에서 멤버 함수들이 정의
 double Circle::calcArea(){
     return 3.14*radius*radius;
 }

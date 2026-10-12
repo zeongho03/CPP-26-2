@@ -3,7 +3,7 @@
 #include <windows.h>
 using namespace std;
 
-class PrintData {
+class PrintData { //멤버 함수(메소드) 중복 정의 가능
 public:
     void print(int i) {cout << i << endl;}
     void print(double f) {cout << f << endl;}

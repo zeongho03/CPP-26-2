@@ -4,8 +4,8 @@ using namespace std;
 
 class Circle {
 public:
-    int radius;
-    string color;
+    int radius; //반지름
+    string color; //색상
 
     double CalcArea(){
         return 3.14 * radius * radius;
