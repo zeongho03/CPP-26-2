@@ -1,9 +1,10 @@
 #include <iostream>
 
+//두 숫자의 합 계산
 int add(int a, int b){
     return a + b;
 }
-
+//세 숫자의 합 계산
 int add(int a, int b, int c){
     return a + b + c;
 }

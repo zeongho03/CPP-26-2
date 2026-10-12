@@ -1,7 +1,7 @@
 #include <iostream>
 #include <windows.h>
 using namespace std;
-
+//함수를 구분하기 위해 전역변수로 설정
 const int NUM_USERS = 3;
 const int NUM_ITEMS = 3;
 int userPreferences[NUM_USERS][NUM_ITEMS];

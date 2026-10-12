@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//전역변수로 설정
 int a = 100, b = 200;
 
 void swap(){
