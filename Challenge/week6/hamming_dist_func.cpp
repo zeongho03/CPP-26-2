@@ -2,7 +2,7 @@
 #include <string>
 #include <windows.h>
 using namespace std;
-
+//문자열을 전부 소문자로 바꾸는 함수
 string toLowerStr(string str){
     string newStr = str;
     for (char& c : newStr){
@@ -10,7 +10,7 @@ string toLowerStr(string str){
     }
     return newStr;
 }
-
+//문자열을 전부 대문자로 바꾸는 함수
 string toUpperStr(string str){
     string newStr = str;
     for (char& c : newStr){
@@ -18,7 +18,7 @@ string toUpperStr(string str){
     }
     return newStr;
 }
-
+//문자열을 모두 소문자 또는 대문자로 바꾼 후 비교하는 함수
 int calcHammingDist(string s1, string s2){
     s1 = toLowerStr(s1);
     s2 = toLowerStr(s2);
@@ -38,7 +38,7 @@ int main(){
 
     string s1, s2;
     int count = 0;
-
+    //입력한 두 문자열의 길이가 같을 때까지 입력 반복
     while(1){
         cout << "DNA 1: ";
         cin >> s1;
