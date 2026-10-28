@@ -3,8 +3,8 @@ using namespace std;
 
 class Time{
 private:
-    int minute;
-    int hour;
+    int minute; //0~59
+    int hour; //0~23
 public:
 
     Time(int h, int m);
@@ -17,16 +17,16 @@ public:
     void SetMinute(int m) {minute = m;}
 };
 
-Time::Time(int h, int m){
+Time::Time(int h, int m){ //외부작성
     hour = h;
     minute = m;
 }
-void Time::IncHour(){
+void Time::IncHour(){ //외부작성
     ++hour;
     if(hour > 23)
         hour = 0;
 }
-void Time::Print(){
+void Time::Print(){ //외부작성
     cout << hour << ":" << minute << endl;
 }
 
