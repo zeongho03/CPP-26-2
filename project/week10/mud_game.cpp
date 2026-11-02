@@ -37,7 +37,7 @@ int main() {
 
 		// 사용자의 입력을 저장할 변수
 		string user_input = "";
-        //3.처음 명령문을 입력 받을 때마다 HP 함께 출력
+        //6.처음 명령문을 입력 받을 때마다 HP 함께 출력
 		cout << "현재 HP : " << userHP <<" 명령어를 입력하세요 (상,하,좌,우,지도,종료): ";
 		cin >> user_input;
 
@@ -46,13 +46,14 @@ int main() {
 			user_y -= 1;
 			bool inMap = checkXY(user_x, mapX, user_y, mapY);
 			if (inMap == false) {
+                //2.지도 밖으로 나가면 에러 메세지
 				cout << "맵을 벗어났습니다. 다시 돌아갑니다." << endl;
 				user_y += 1;
 			}
 			else {
 				cout << "위로 한 칸 올라갑니다." << endl;
 				displayMap(map, user_x, user_y);
-                userHP -= 1; //사용자가 이동할 때 마다 사용자 체력 1씩 감소
+                userHP -= 1; //5. 사용자가 이동할 때 마다 사용자 체력 1씩 감소
 			}
 		}
 		else if (user_input == "하") {
@@ -119,7 +120,7 @@ int main() {
 			break;
 		}
 
-        //4.HP가 0이 되면 "실패"를 출력하고 종료
+        //7.HP가 0이 되면 "실패"를 출력하고 종료
         bool alive = HPCheck(userHP);
         if (alive == false){
             cout << "HP가 0 이하가 되었습니다. 실패했습니다.";
@@ -127,7 +128,7 @@ int main() {
             break;
         }
 
-        //5.무기/갑옷, 포션, 적을 만났을 때 그에 대한 메시지를 출력
+        //8.무기/갑옷, 포션, 적을 만났을 때 그에 대한 메시지를 출력
         for (int i = 0; i < mapX; i++){
             for (int j = 0; j < mapY; j++){
                 //아이템
