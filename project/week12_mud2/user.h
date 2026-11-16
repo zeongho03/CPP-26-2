@@ -10,6 +10,5 @@ public:
     void IncreaseHP(int inc_hp);
     void IncreaseItem();
     int GetHP();
-    int GetItemCnt();
     friend std::ostream& operator<<(std::ostream& os, const User& user);
 };
