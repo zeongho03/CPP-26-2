@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 #include "user.h"
 
 void User::DecreaseHP(int dec_hp){
