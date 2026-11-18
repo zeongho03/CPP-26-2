@@ -39,17 +39,12 @@ std::ostream &operator<<(std::ostream &os, const User &user)
     return os;
 }
 
-class Magician : public User
-{
-    void doAttack()
-    {
-        cout << "마법 사용" << endl;
-    }
-};
+// 마법사 공격 재정의
+void Magician::doAttack() {
+    cout << "마법 사용" << endl;
+}
 
-class Warrior : public User
-{
-    void doAttack() { 
-        cout << "베기 사용" << endl; 
-    }
-};
+// 전사 공격 재정의
+void Warrior::doAttack() {
+    cout << "베기 사용" << endl;
+}
