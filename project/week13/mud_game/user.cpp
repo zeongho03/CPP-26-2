@@ -8,6 +8,9 @@ User::User()
     itemCnt = 0;
 }
 
+Magician::Magician() {};
+Warrior::Warrior() {};
+
 void User::DecreaseHP(int dec_hp)
 {
     hp -= dec_hp;

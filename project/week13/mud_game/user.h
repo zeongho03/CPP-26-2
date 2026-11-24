@@ -1,18 +1,32 @@
 #include <iostream>
 
-class User {
+class User
+{
 private:
     int hp;
     int itemCnt;
+
 public:
     User();
-    void doAttack();
+    virtual ~User() = default;
+
+    virtual void doAttack() = 0;
     void DecreaseHP(int dec_hp);
     void IncreaseHP(int inc_hp);
     void IncreaseItem();
     int GetHP();
-    friend std::ostream& operator<<(std::ostream& os, const User& user);
+    friend std::ostream &operator<<(std::ostream &os, const User &user);
 };
 
-class Magician : public User{void doAttack();};
-class Warrior : public User{void doAttack();};
+class Magician : public User
+{
+public:
+    Magician();
+    void doAttack();
+};
+class Warrior : public User
+{
+public:
+    Warrior();
+    void doAttack();
+};
