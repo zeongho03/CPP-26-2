@@ -253,6 +253,18 @@ int main()
         cout << "Prediction : Class 0" << endl;
     }
     
+
+    // Step Function Layer 테스트 (기존 network 결과와 분리해 확인)
+    Layer* stepLayer = new Step();
+    vector<double> stepOutput = stepLayer->forward(output);
+
+    cout << endl;
+    cout << "================================" << endl;
+    cout << "       Step Layer Test" << endl;
+    cout << "================================" << endl;
+    cout << stepLayer->getName() << endl;
+    printVector(stepOutput);
+    
     // 7. 동적 객체 메모리 해제
     for (Layer* layer : network)
     {
